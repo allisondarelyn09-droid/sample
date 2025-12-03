@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salt & Synapse Wellness</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Arial', sans-serif;
-      color: #333;
       line-height: 1.6;
-      background: #f9f8f6; /* light neutral for overall page */
+      background-color: #F4F4F4; /* light gray page background */
+      color: #0B1D51; /* navy text default */
     }
+
+    a { text-decoration: none; }
 
     /* Hero Section */
     .hero {
@@ -25,11 +24,21 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
       min-height: 100vh;
       padding: 50px 20px;
-      text-align: center;
-      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('YOUR-BACKGROUND-IMAGE-URL.jpg') no-repeat center center/cover;
-      color: #fff;
+      background: url('YOUR-BACKGROUND-IMAGE-URL.jpg') no-repeat center center/cover;
+      color: #FFFFFF;
+    }
+
+    /* Dark overlay for readability */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top:0; left:0;
+      width: 100%; height: 100%;
+      background: rgba(11,29,81,0.6); /* navy overlay */
+      z-index: 0;
     }
 
     .hero-content {
@@ -59,9 +68,8 @@
 
     .hero a.button {
       display: inline-block;
-      background-color: #FFD700; /* golden-yellow matches logo */
-      color: #333;
-      text-decoration: none;
+      background-color: #3A6B35; /* greenery */
+      color: #FFFFFF;
       padding: 18px 35px;
       border-radius: 50px;
       font-weight: bold;
@@ -70,14 +78,14 @@
     }
 
     .hero a.button:hover {
-      background-color: #FFC700;
+      background-color: #2E5529;
     }
 
-    /* Additional Content Section */
+    /* Content Section */
     .content {
       max-width: 700px;
       margin: 50px auto;
-      background: #fff;
+      background-color: #FFFFFF; /* white content box */
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -86,21 +94,15 @@
 
     .content p {
       font-size: 1rem;
-      color: #555;
+      color: #0B1D51;
       line-height: 1.6;
     }
 
     /* Responsive */
     @media(max-width: 768px){
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .hero p.subheadline {
-        font-size: 1rem;
-      }
-      .hero img.logo {
-        margin-bottom: 20px;
-      }
+      .hero h1 { font-size: 2.2rem; }
+      .hero p.subheadline { font-size: 1rem; }
+      .hero img.logo { margin-bottom: 20px; }
     }
   </style>
 </head>
