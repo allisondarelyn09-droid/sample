@@ -223,4 +223,64 @@
 </section>
 
 <!-- About Section -->
-<section id="
+<section id="about" style="background-color: #F4F4F4;">
+  <div class="section-content">
+    <h2>About Salt & Synapse Wellness</h2>
+    <p>
+      Through personalized psychiatry, nutrition, and lifestyle medicine, we help you restore clarity, calm, and connection within yourself. We go beyond symptoms to uncover what truly supports your wellness.
+    </p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+  <div class="section-content">
+    <h2>Our Services</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Personalized Psychiatry</h3>
+        <p>Comprehensive mental health care tailored to your unique needs.</p>
+      </div>
+      <div class="card">
+        <h3>Nutrition Guidance</h3>
+        <p>Support for mental and physical wellness through diet and lifestyle.</p>
+      </div>
+      <div class="card">
+        <h3>Lifestyle Medicine</h3>
+        <p>Holistic strategies to improve overall well-being and balance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" style="background-color: #F4F4F4;">
+  <div class="section-content">
+    <h2>Book Your Free Discovery Call</h2>
+    <p>Take the first step toward restoring clarity and connection. Schedule your consultation today.</p>
+    <a href="mailto:contact@saltsynapse.com" class="button">Book Now</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Salt & Synapse Wellness. All rights reserved.
+</footer>
+
+<script>
+  // Animate sections on scroll
+  const sections = document.querySelectorAll('.section-content, .card, .hero-content');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
